@@ -5,19 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Undangan Pernikahan</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <audio id="bg-music" loop>
-<audio id="bg-music" src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" loop></audio>
-  </audio>
+  <!-- Musik Background -->
+  <audio id="bg-music" src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" loop></audio>
 
+  <!-- Animasi bunga jatuh -->
+  <div class="petals"></div>
+
+  <div class="overlay"></div>
   <div class="container">
     <!-- Slide 1 -->
     <section class="slide active" id="slide1">
       <h1 class="title">Undangan Pernikahan</h1>
-      <h2 class="couple">Rivanda ❤️ SECRETLOVE</h2>
+      <h2 class="couple">Rivanda <span>❤️</span> SECRETLOVE</h2>
       <p class="date">Minggu, 15 Desember 2025</p>
-      <button class="btn" onclick="nextSlide()">Masuk</button>
+      <div class="countdown">
+        <h3>Menuju Hari Bahagia:</h3>
+        <div id="timer"></div>
+      </div>
+      <button class="btn" onclick="startInvitation()">💌 Buka Undangan</button>
     </section>
 
     <!-- Slide 2 -->
@@ -27,8 +35,8 @@
       <p><strong>Jam:</strong> 10:00 WITA - Selesai</p>
       <p><a href="https://maps.google.com" target="_blank" class="map-link">📍 Lihat di Google Maps</a></p>
       <div class="btn-group">
-        <button class="btn" onclick="prevSlide()">Kembali</button>
-        <button class="btn" onclick="nextSlide()">Lanjut</button>
+        <button class="btn" onclick="prevSlide()">⬅ Kembali</button>
+        <button class="btn" onclick="nextSlide()">Lanjut ➡</button>
       </div>
     </section>
 
@@ -45,7 +53,8 @@
         <button type="submit" class="btn">Kirim</button>
       </form>
       <div class="btn-group">
-        <button class="btn" onclick="prevSlide()">Kembali</button>
+        <button class="btn" onclick="prevSlide()">⬅ Kembali</button>
+        <a id="shareWA" class="btn" target="_blank">📲 Share WhatsApp</a>
       </div>
     </section>
   </div>
