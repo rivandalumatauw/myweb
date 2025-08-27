@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="bg-music" loop>
+<audio id="bg-music" src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" loop></audio>
+  </audio>
+
+  <div class="container">
+    <!-- Slide 1 -->
+    <section class="slide active" id="slide1">
+      <h1 class="title">Undangan Pernikahan</h1>
+      <h2 class="couple">Rivanda ❤️ SECRETLOVE</h2>
+      <p class="date">Minggu, 15 Desember 2025</p>
+      <button class="btn" onclick="nextSlide()">Masuk</button>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="slide" id="slide2">
+      <h1>Detail Acara</h1>
+      <p><strong>Lokasi:</strong> Hotel Aryaduta Manado</p>
+      <p><strong>Jam:</strong> 10:00 WITA - Selesai</p>
+      <p><a href="https://maps.google.com" target="_blank" class="map-link">📍 Lihat di Google Maps</a></p>
+      <div class="btn-group">
+        <button class="btn" onclick="prevSlide()">Kembali</button>
+        <button class="btn" onclick="nextSlide()">Lanjut</button>
+      </div>
+    </section>
+
+    <!-- Slide 3 -->
+    <section class="slide" id="slide3">
+      <h1>RSVP Kehadiran</h1>
+      <form id="rsvpForm">
+        <input type="text" id="nama" placeholder="Masukkan nama" required>
+        <select id="status" required>
+          <option value="">Konfirmasi</option>
+          <option value="Hadir">Hadir</option>
+          <option value="Tidak Hadir">Tidak Hadir</option>
+        </select>
+        <button type="submit" class="btn">Kirim</button>
+      </form>
+      <div class="btn-group">
+        <button class="btn" onclick="prevSlide()">Kembali</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

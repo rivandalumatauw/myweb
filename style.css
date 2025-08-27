@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fff5f8;
+  color: #333;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.slide {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.slide.active {
+  display: flex;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.title {
+  font-size: 3rem;
+  color: #b38b59;
+  margin-bottom: 10px;
+}
+
+.couple {
+  font-size: 2rem;
+  color: #d46b91;
+}
+
+.date {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #d46b91;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #b14f74;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+input, select {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.map-link {
+  text-decoration: none;
+  color: #b38b59;
+  font-weight: bold;
+}
